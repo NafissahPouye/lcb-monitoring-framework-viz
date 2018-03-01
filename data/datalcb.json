@@ -1,0 +1,29 @@
+[
+  {
+    "Country": "Chad",
+    "country_code": "TCD",
+    "nb_proj": 6,
+    "financement": 2.9,
+    "personnes_ben": 92500,
+    "menages_ben": 15250,
+    "activities": "Soutien agricole, Soutien à l'élevage, CASH transferts, Formations"
+  },
+  {
+    "Country": "Niger",
+    "country_code": "NER",
+    "nb_proj": 3,
+    "financement": 3.8,
+    "personnes_ben": 141200,
+    "menages_ben": 24560,
+    "activities": "Soutien agricole, Soutien à l'élevage"
+  },
+  {
+    "Country": "Cameroun",
+    "country_code": "CMR",
+    "nb_proj": 4,
+    "financement": 2,
+    "personnes_ben": 37500,
+    "menages_ben": 7500,
+    "activities": "Soutien agricole, Soutien au bétail, Formation"
+  }
+]
