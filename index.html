@@ -17,61 +17,53 @@
 
     </head>
     <body>
-      <div class="container-fluid" id='main-container'>
-        <div class='content'>
-          <div class='container'>
-          	<div class="row">
-              <div class="col-md-12">
-                <h2> Monitoring Framework </h2>
-              </div>
-            </div>
-            <div class="row">
-           <div class="col-md-11"> </div> 
-        <div class="col-md-1">
-            <div class="row">
-              <a class="reset btn btn-primary btn-sm" id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset All</a>
-            </div>
-            </div>
-            </div>
-             <div class="row" id="keyfigures">
-            <div class="col-md-4" >
-                <div id="count-info"> <h5>Nombre de projets: </h5>
-                   <center><strong><span class="number-display"></span></strong></center>
-            </div>
-           </div>
-          
-          <div class="col-md-4">
-                <div id="count-info2"> <h5>   Financement: </h5>
-                   <span class="number-display"></span> Millions USD
-            </div>
+      <div class="container" id='main-container'>
+        <div class="row">
+          <div class="col-sm-3" id="logo"> 
+            <a target="_blank" href="https://data.humdata.org/"> <img class="img-responsive" src="img/HDX-logo-home.svg" alt="HDX"> </a>
+
+          </div> 
+          <div class="col-sm-5" id="logo">
+            <a target="_blank" href="https://data.humdata.org/organization/fao-reowa"> <img class="img-responsive" src="img/FAO.jpg" alt="HDX"> </a>
+          </div>  
+        </div>
+        <div class="row">
+          <div class="col-md-11"> 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
           </div>
-          <div class="col-md-4">
-                <div id="count-info3"> <h5>Activité: </h5>
-                   <span class="number-display"></span> 
-            </div>
+          <div class="col-md-1">
+            <a class="reset btn btn-primary btn-sm" id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Réinitialiser</a>
           </div>
-            <!-- <div class="col-xs-3" id="keyfigures">
-                <div class="row" style="text-align:left">
-                    <p style="padding-left:0px" id="Financements"></p>
-                    <h4>Financements</h4>
-                </div>
-            </div>
-            <div class="col-xs-3" id="keyfigures">
-                <div class="row" style="text-align:left">
-                    <p style="padding-left:0px" id="Activities"></p>
-                    <h4>Activités</h4>
-                </div>
-            </div> -->
-            
         </div>
         <div class="row">
             <div id="header" class="col-md-12"></div>
         </div>
-          <div class="row">
-            <div class="col-md-12" id="MapLCB"></div>
+        <div class="row">
+        <div class="col-md-3">
+            <div class="keyfigures1 col-md-12" id="count-info"> 
+              <h4>Nombre de projets</h4>
+              <div class="number-display"></div>
+            </div>
+            <div class="keyfigures1 col-md-12" id="count-info2"> 
+              <h4>Financement </h4>
+              <div class="number-display"></div> 
+            </div>
+        </div>
+        <div class="col-md-6">
+          <div class="col-md-12" id="MapLCB"></div>
+        </div>
+        <div class="col-md-3">
+          <div class="keyfigures col-md-12" id="count-info3">
+            <h4>Nombre de ménages bénéficiaires</h4>
+            <div class="number-display">2345566</div> 
           </div>
+          <div class="keyfigures col-md-12" id="count-info4">
+            <h4>Nombre de personnes bénéficiaires </h4>
+            <div class="number-display">432222</div> 
           </div>
-          </div>
+        </div> 
+        </div>
+      </div> 
       <script src="js/site.js"></script>
   </body>
   </html>
