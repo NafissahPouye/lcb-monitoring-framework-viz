@@ -109,7 +109,7 @@ beneficiaires.dimension(benDim)
         var bounds = d3.geo.bounds(geodata) ;
         map.fitBounds([[bounds[0][1],bounds[0][0]],[bounds[1][1],bounds[1][0]]])
             .setZoom(4.7)
-            .setView([10, 9], 4)
+            .setView([10, 10], 4)
            ;}
 
       function genLookup(geojson) {
