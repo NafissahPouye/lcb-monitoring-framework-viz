@@ -1061,7 +1061,7 @@
         }), o.TileLayer = o.Class.extend({
             includes: o.Mixin.Events,
             options: {
-                minZoom: 0,
+                minZoom: 8,
                 maxZoom: 18,
                 tileSize: 256,
                 subdomains: "abc",

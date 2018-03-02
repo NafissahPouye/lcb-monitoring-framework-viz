@@ -54,23 +54,18 @@
   margin-top: 50px;
 }
 .keyfigures h4{
-  height: 48px;
-  background-color: #dddddd;
-  text-align: center;
-  font-size: 1.5em;
+  height: 30px;
+  /*background-color: #dddddd;*/
+  text-align: left;
+  font-size: 1.7em;
 }
 .keyfigures1 {
-  height: 100px;
+  height: 150px;
   margin-top: 50px;
 }
 .keyfigures1 h4{
   height: 30px;
-  
-  background-color: #dddddd;
-  text-align: center;
+ /* background-color: #dddddd;*/
+  text-align: left;
   font-size: 1.7em;
-}
-.number-display {
-  font-size: 1.7em;
-  text-align: right;
 }

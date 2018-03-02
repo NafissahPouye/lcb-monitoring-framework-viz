@@ -25,5 +25,14 @@
     "personnes_ben": 37500,
     "menages_ben": 7500,
     "activities": "Soutien agricole, Soutien au bétail, Formations"
+  },
+   {
+    "Country": "Nigeria",
+    "country_code": "NGA",
+    "nb_proj": 4,
+    "financement": 2,
+    "personnes_ben": 971607 ,
+    "menages_ben": 138801,
+    "activities": "Soutien agricole, Soutien au bétail, Formations"
   }
 ]

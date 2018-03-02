@@ -27,23 +27,24 @@ dc.dataCount('#count-info')
   .dimension(cf)
   .group(all);
 
-  mapLCB
-            
+        mapLCB
              .dimension(mapDimension)
              .group(mapGroup)
              .center([0,0])
              .zoom(0)
              .geojson(vargeodata)
-             .colors(['#FFC8BF','#F59181', '#FE5A43'])
+             .colors(['#f0f0f0','#fee0d2','#fc9272','#de2d26'])
              .colorDomain([0,3])
              .colorAccessor(function (d){
               var c = 0
-               if (d>92000) {
+               if (d>150000) {
                     c = 3;
-               } else if (d>37500){
+               } else if (d>90000){
                   c = 2;
-              } else if (d>0) {
+              } else if (d>30000) {
                 c = 1;
+              }else if (d>0) {
+                c = 0;
               }
                return c
 
@@ -58,7 +59,7 @@ dc.dataCount('#count-info')
                 for (var i = 0; i < alltext.length; i++) {
                     text += alltext[i]+'<br>';
                 }
-               return '<h4><strong>'+ d.properties['country_name'] +'</strong></h4>'+'<h5><strong>'+'Activités </strong>'+text+'</h5>';
+               return '<h4><strong>'+ d.properties['country_name'] +'</strong></h4>'+'<h5><strong>'+'Bénéficiaires:</strong><br>'+d.properties['personnes_ben']+' personnes<br>'+d.properties['menages_ben']+' ménages'+'</h5>';
              })
              .renderPopup(true)
              .featureOptions({
