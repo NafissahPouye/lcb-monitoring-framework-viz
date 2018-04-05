@@ -2,6 +2,11 @@ h5{
   font-weight: bold;
   margin-bottom: 0px;
 }
+
+#description{
+  margin-top: 5px;
+  text-align: justify;
+}
 .dc-chart g.row text {
     fill: black;
     font-size:0.8em;
