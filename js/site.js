@@ -53,13 +53,14 @@ dc.dataCount('#count-info')
              .featureKeyAccessor(function (feature){
                return feature.properties['country_code'];
              }).popup(function (d){
-                var act = d.properties['activities'] ;
-                var alltext = act.split(",");
-                var text = '<br>';
-                for (var i = 0; i < alltext.length; i++) {
-                    text += alltext[i]+'<br>';
-                }
-               return '<h4><strong>'+ d.properties['country_name'] +'</strong></h4>'+'<h5><strong>'+'Bénéficiaires:</strong><br>'+d.properties['personnes_ben']+' personnes<br>'+d.properties['menages_ben']+' ménages'+'</h5>';
+                // var act = d.properties['activities'] ;
+                // var alltext = act.split(",");
+                // var text = '<br>';
+                // for (var i = 0; i < alltext.length; i++) {
+                //     text += alltext[i]+'<br>';
+                // }
+               //return '<h4><strong>'+ d.properties['country_name'] +'</strong></h4>'+'<h5><strong>'+'Bénéficiaires:</strong><br>'+d.properties['personnes_ben']+' personnes<br>'+d.properties['menages_ben']+' ménages'+'</h5>';
+                return auClick(d);
              })
              .renderPopup(true)
              .featureOptions({
@@ -74,7 +75,17 @@ dc.dataCount('#count-info')
               .formatNumber(d3.format(".g"))
               .valueAccessor(function (d) { return d;
               } ) ; 
-    
+
+function auClick(d){
+  var act = d.properties['activities'] ;
+  var alltext = act.split(",");
+  var text = '<br>';
+  for (var i = 0; i < alltext.length; i++) {
+    text += alltext[i]+'<br>';
+  }
+  return '<h4><strong>'+ d.properties['country_name'] +'</strong></h4>'+'<h5><strong>'+'Bénéficiaires:</strong><br>'+d.properties['personnes_ben']+' personnes<br>'+d.properties['menages_ben']+' ménages'+'</h5>';
+}
+
 // key figures financement by country
 var formatDecimal = function(d) {
         ret = d3.format(".2f");
