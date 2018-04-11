@@ -7,8 +7,8 @@ var map = L.map('MapLCB',
     });
 
 //map.setView([20, 40], 1);
-map.setView([9.5, 13], 4)
-   .setZoom(4.7);
+map.setView([15, 15], 4)
+   .setZoom(4.3);
 
 //3/13.67/
 /*L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/traffic-day-v2/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYW1hZG91MTciLCJhIjoib3NhRnROQSJ9.lW0PVXVIS-j8dGaULTyupg', {
