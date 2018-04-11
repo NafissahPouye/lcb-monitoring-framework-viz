@@ -90,10 +90,10 @@ function style(feature) {
         };
     } else if (feature.properties.personnes_ben == 37500) {
         return {
-            fillColor: '#fee0d2',
+            fillColor: '#fbb4ae',
             weight: 2,
             opacity: 0.6,
-            color: '#fee0d2',
+            color: '#fbb4ae',
             //dashArray: '3',
             fillOpacity: 0.5
         };
