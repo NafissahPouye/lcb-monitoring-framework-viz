@@ -1,6 +1,6 @@
 /* global dc, L */
 dc.leafletChart = function (_chart) {
-    "use strict";
+   // "use strict";
     _chart = dc.baseChart(_chart);
 
     var _map;
@@ -669,7 +669,7 @@ dc.leafletChoroplethChart = function (parent, chartGroup) {
             };
 
         _info.update = function (name) {
-                this._div.innerHTML = (name ? name: 'Survoler la carte');
+                this._div.innerHTML = (name ? name: 'Cliquer');
             };
 
         _info.addTo(_chart.map());
