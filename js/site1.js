@@ -1,15 +1,26 @@
 var map = L.map('MapLCB',
 
     {
-        maxZoom: 7,
-        minZoom: 3,
-        zoomControl: false
+        
+        maxZoom: 18,
+        minZoom: 2,
+        zoomControl: false,
+
+        
+       // scrollWheelZoom: false
     });
 
 //map.setView([20, 40], 1);
-map.setView([15, 15], 4)
-   .setZoom(4.3);
-
+map.setView([15, 15], 2)
+      .setZoom(4.3)
+map.touchZoom.disable();
+map.doubleClickZoom.disable();
+map.scrollWheelZoom.disable();
+map.boxZoom.disable();
+map.keyboard.disable();
+/*map.scrollWheelZoom.disable();
+map.on('mouseover', map.scrollWheelZoom.disable.bind(map.scrollWheelZoom) );*/
+//map.dragging.disable();
 //3/13.67/
 /*L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/traffic-day-v2/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYW1hZG91MTciLCJhIjoib3NhRnROQSJ9.lW0PVXVIS-j8dGaULTyupg', {
     
@@ -117,7 +128,9 @@ function getColor(d) {
         d > 10 ? '#FED976' :
         '#FFEDA0';
 }
-
+if (map.scrollWheelZoom) {
+  map.scrollWheelZoom.disable();
+}
 
 //
 //var legend = L.control({

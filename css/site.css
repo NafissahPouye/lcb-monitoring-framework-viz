@@ -23,6 +23,10 @@ body{
 
 #MapLCB{
     height:400px;
+    position:absolute;
+    top:0;
+    bottom:0; 
+    width:100%;
     
 }
 
@@ -61,6 +65,10 @@ body{
 .keyfigures {
   height: 50px;
   /*margin-top: 50px;*/
+}
+#reset {
+  /*float:right;*/
+  margin-bottom: 10px;
 }
 /*.keyfigures h4{
   height: 30px;
