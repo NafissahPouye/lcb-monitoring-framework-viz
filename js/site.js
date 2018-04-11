@@ -1,6 +1,5 @@
 function generateringComponent(vardata, vargeodata){
   var lookup = genLookup(vargeodata) ;
-
   var mapLCB = dc.leafletChoroplethChart('#MapLCB');
   var cf = crossfilter(vardata) ;
   var all = cf.groupAll();
