@@ -11,8 +11,8 @@ var map = L.map('MapLCB',
     });
 
 //map.setView([20, 40], 1);
-map.setView([15, 15], 2)
-      .setZoom(4.3)
+map.setView([14, 14], 2)
+      .setZoom(4.6)
 map.touchZoom.disable();
 map.doubleClickZoom.disable();
 map.scrollWheelZoom.disable();
