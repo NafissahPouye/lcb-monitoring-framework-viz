@@ -14,16 +14,9 @@ map.setView([14, 14], 2)
 //map.touchZoom.disable();
 map.doubleClickZoom.disable();
 map.scrollWheelZoom.disable();
-//map.boxZoom.disable();
-//map.keyboard.disable();
+map.boxZoom.disable();
+map.keyboard.disable();
 map.dragging.disable();
-/*map.scrollWheelZoom.disable();*/
-//map.on('mouseover', map.scrollWheelZoom.disable.bind(map.scrollWheelZoom) );
-//map.dragging.disable();
-//3/13.67/
-/*L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/traffic-day-v2/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYW1hZG91MTciLCJhIjoib3NhRnROQSJ9.lW0PVXVIS-j8dGaULTyupg', {
-    
-}).addTo(map);*/
 
 Winheight = $(window).height("#MapLCB");
      $("#MapLCB").css("background-color","#FFFFFF");
@@ -52,10 +45,7 @@ function highlightFeature(e) {
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
 }
-//
-//function zoomToFeature(e) {
-//    // map.fitBounds(e.target.getBounds());
-//}
+
 
 function onEachFeature(feature, layer) {
     layer.on({
@@ -115,8 +105,6 @@ function style(feature) {
     }
 }
 
-
-
 geojson = L.geoJson(sahel, {
     style: style,
     onEachFeature: onEachFeature
@@ -135,25 +123,3 @@ function getColor(d) {
 if (map.scrollWheelZoom) {
   map.scrollWheelZoom.disable();
 }
-
-//
-//var legend = L.control({
-//    position: 'bottomright'
-//});
-//
-//legend.onAdd = function (map) {
-//
-//    var div = L.DomUtil.create('div', 'info legend'),
-//
-//    div.innerHTML +=
-//        '<i style="background:#FF493D">Very heavily affected</i>  <br/'
-//    div.innerHTML +=
-//        '<i style="background:#2b8cbe">Heavily affected</i>  <br/'
-//    div.innerHTML +=
-//        '<i style="background:#ffeda0">Affected</i>  <br/'
-//
-//
-//    return div;
-//};
-//
-//legend.addTo(map);
