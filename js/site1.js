@@ -14,10 +14,10 @@ map.setView([14, 14], 2)
 //map.touchZoom.disable();
 map.doubleClickZoom.disable();
 map.scrollWheelZoom.disable();
-//map.boxZoom.disable();
-//map.keyboard.disable();
+map.boxZoom.disable();
+map.keyboard.disable();
 map.dragging.disable();
-/*map.scrollWheelZoom.disable();*/
+//map.scrollWheelZoom.disable();
 //map.on('mouseover', map.scrollWheelZoom.disable.bind(map.scrollWheelZoom) );
 //map.dragging.disable();
 //3/13.67/
