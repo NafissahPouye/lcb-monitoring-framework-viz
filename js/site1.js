@@ -22,7 +22,6 @@ Winheight = $(window).height("#MapLCB");
      $("#MapLCB").css("background-color","#FFFFFF");
      $('.leaflet-control-attribution').hide();
 
-
 var geojson;
 
 
@@ -64,12 +63,12 @@ function onEachFeature(feature, layer) {
 
 
 function style(feature) {
-    if (feature.properties.personnes_ben == 971607) {
+    if (feature.properties.personnes_ben == 1090000) {
         return {
 
             fillColor: '#de2d26',
-            weight: 4,
-            opacity: 0.2,
+            weight: 2,
+            opacity: 0.6,
             color: '#de2d26',
             fillOpacity: 0.8
         };
