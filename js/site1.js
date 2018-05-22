@@ -1,26 +1,24 @@
 var map = L.map('MapLCB',
-
     {
-        
+    
         maxZoom: 18,
         minZoom: 2,
         zoomControl: false,
 
-        
        // scrollWheelZoom: false
     });
 
 //map.setView([20, 40], 1);
 map.setView([14, 14], 2)
-      .setZoom(4.6)
-map.touchZoom.disable();
+      .setZoom(4.6);
+//map.touchZoom.disable();
 map.doubleClickZoom.disable();
 map.scrollWheelZoom.disable();
-map.boxZoom.disable();
-map.keyboard.disable();
+//map.boxZoom.disable();
+//map.keyboard.disable();
 map.dragging.disable();
-/*map.scrollWheelZoom.disable();
-map.on('mouseover', map.scrollWheelZoom.disable.bind(map.scrollWheelZoom) );*/
+/*map.scrollWheelZoom.disable();*/
+//map.on('mouseover', map.scrollWheelZoom.disable.bind(map.scrollWheelZoom) );
 //map.dragging.disable();
 //3/13.67/
 /*L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/traffic-day-v2/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYW1hZG91MTciLCJhIjoib3NhRnROQSJ9.lW0PVXVIS-j8dGaULTyupg', {
@@ -66,7 +64,12 @@ function onEachFeature(feature, layer) {
         //click: zoomToFeature
     });
     layer.bindPopup('<h4>'+ feature.properties['country_name'] +'</h4>'+'<h6>'+'Bénéficiaires:<br>'+feature.properties['personnes_ben']+' personnes<br>'+feature.properties['menages_ben']+' ménages'+'</h6>');
-
+    layer.on('mouseover', function (e) {
+            this.openPopup();
+        });
+        layer.on('mouseout', function (e) {
+            this.closePopup();
+        });
 }
 
 
@@ -74,7 +77,7 @@ function style(feature) {
     if (feature.properties.personnes_ben == 971607) {
         return {
 
-            fillColor:  '#de2d26',
+            fillColor: '#de2d26',
             weight: 4,
             opacity: 0.2,
             color: '#de2d26',
